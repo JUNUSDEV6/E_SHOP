@@ -9,7 +9,7 @@ INSERT INTO locales (code, name) VALUES
     ('en', 'English');
 
 CREATE TABLE category_translations (
-	category_id bigint REFERENCES categories(id) ON DELETE CASCADE,
+	category_id bigint REFERENCES category(id) ON DELETE CASCADE,
 	locale 		text REFERENCES locales(code),
 	name		text NOT NULL,
 	PRIMARY KEY (category_id, locale)
